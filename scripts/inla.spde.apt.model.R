@@ -7,14 +7,14 @@
 ## on the SPDE mesh.
 ## Then INLA is used to create a separate model for each condition,
 ## with different spatial parameters for each.
-## The range and standard deviation parameters for each condition's 
-## model are extracted from the fitted models.
-## New data is loaded and processed in a similar way to the training data,
-## and the range and standard deviation are calculated.
-## The distances between the new data's parameters and the reference 
-## models' parameters are calculated, with the smallest distance used
-## to identify the most appropriate model. 
+## A multinomial logistic regression is used to discern one of 
+## three lake border conditions (well defined, blurred, and 
+## without a clear border) within the images.
+## The border condition predicted by the multinomial regression 
+## on the new data is used to identify the most appropriate model.
 ## The selected model is then used to predict over the new data. 
+## This script calls and depends on the scripts: 
+## multinomial.regression.boundary.model.R and est.REG.INLA.R
 ## This code was compiled by Diarmuid Corr, Lancaster University.
 ## Contact dcorr103@gmail.com for any further information.
 
