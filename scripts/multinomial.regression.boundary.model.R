@@ -1,20 +1,12 @@
 ## This code is written in R and allows spatial data 
 ## processing and modeling using the INLA package in R.
-## The script process geospatial data for three different 
-## lake boundary conditions: "Defined," "Blurred," and "NoClear."
-## Creates a consistent mesh determined for input data 192*192 pixels.
-## It defines an SPDE model by constructinf a Matérn covariance model 
-## on the SPDE mesh.
-## Then INLA is used to create a separate model for each condition,
-## with different spatial parameters for each.
-## The range and standard deviation parameters for each condition's 
-## model are extracted from the fitted models.
-## New data is loaded and processed in a similar way to the training data,
-## and the range and standard deviation are calculated.
-## The distances between the new data's parameters and the reference 
-## models' parameters are calculated, with the smallest distance used
-## to identify the most appropriate model. 
-## The selected model is then used to predict over the new data. 
+## This script is takes input satellite data of 192*192 pixels
+## and makes a prediction of th lake border conditions based on
+## the properties of the input image.
+## This script is called from within inla.spde.apt.model.R.
+## A multinomial logistic regression is used to discern one of 
+## three lake border conditions (well defined, blurred, and 
+## without a clear border) within the images.
 ## This code was compiled by Diarmuid Corr, Lancaster University.
 ## Contact dcorr103@gmail.com for any further information.
 
