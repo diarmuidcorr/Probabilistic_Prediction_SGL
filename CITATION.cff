@@ -1,0 +1,21 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Probabilistic_Prediction_SGL
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Diarmuid
+    family-names: Corr
+    email: dcorr103@gmail.com
+    affiliation: Lancaster University
+    orcid: 'https://orcid.org/0000-0002-7026-2052'
+repository-code: >-
+  https://github.com/diarmuidcorr/Probabilistic_Prediction_SGL
+abstract: >-
+  A probabilistic prediction of supraglacial lakes on the
+  southwest Greenland Ice Sheet using INLA-SPDE.
+license: CC0-1.0
